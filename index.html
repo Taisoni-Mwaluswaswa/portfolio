@@ -30,74 +30,84 @@
       align-items: center;
       justify-content: flex-start;
       overflow-y: auto;
+      padding-top: 10px;
     }
 
-    /* CONTAINER LA PICHA - INAWEZA KUKATA PICHA KUTOKA JUU */
+    /* TITLE JUU KABISA - NYEMBANIA */
+    .top-title {
+      width: 100%;
+      text-align: center;
+      padding: 8px 0;
+      margin-bottom: 5px;
+    }
+    .top-title h1 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #2c7a5e;
+      letter-spacing: 1px;
+      background: transparent;
+      -webkit-text-fill-color: #2c7a5e;
+      background: none;
+    }
+
+    /* CONTAINER LA PICHA - NDOGO KIDOGO */
     .image-top {
       width: 100%;
       display: block;
       overflow: hidden;
       background: white;
-      /* Hii ndio fungu muhimu - inafanya picha ikatwe kutoka juu */
-      max-height: 60vh;
-      min-height: 40vh;
+      max-height: 45vh;
+      min-height: 30vh;
     }
 
     .image-top img {
       width: 100%;
       height: auto;
       display: block;
-      /* KATA PICHA KUTOKA JUU - kama magoti */
-      margin-top: -80px;  /* Badilisha namba hii kurekebisha sehemu inayoanza */
-      margin-bottom: -50px;
+      margin-top: -40px;
+      margin-bottom: -30px;
     }
 
-    /* WELCOME CONTENT - BACKGROUND SAFI */
+    /* WELCOME CONTENT - IMEPANDISHWA JUU */
     .welcome-content-bottom {
       text-align: center;
       width: 100%;
-      max-width: 700px;
-      padding: 1rem 1.5rem 2rem 1.5rem;
+      max-width: 650px;
+      padding: 0.5rem 1.5rem 1.5rem 1.5rem;
       background: transparent;
-      margin-top: -20px;
+      margin-top: -10px;
     }
 
-    .welcome-content-bottom h1 {
-      font-size: 2rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #1f4e3c, #2c7a5e);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      margin-bottom: 0.5rem;
+    .welcome-content-bottom .main-title {
+      display: none; /* Ile title ya awali imefichwa */
     }
 
     .welcome-content-bottom .tagline {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #1a2a3a;
       font-weight: 600;
       margin-bottom: 0.5rem;
     }
 
     .welcome-content-bottom p {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: #2c3e4e;
       margin-bottom: 1rem;
-      line-height: 1.5;
+      line-height: 1.4;
     }
 
     .enter-btn {
       background: linear-gradient(135deg, #2c7a5e, #1f4e3c);
       color: white;
       border: none;
-      padding: 0.8rem 1.5rem;
-      font-size: 1rem;
+      padding: 0.7rem 1.3rem;
+      font-size: 0.9rem;
       font-weight: 700;
       border-radius: 60px;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
     
@@ -105,15 +115,15 @@
       background: linear-gradient(135deg, #3b82f6, #1e4a8a);
       color: white;
       border: none;
-      padding: 0.5rem 1.2rem;
-      font-size: 0.9rem;
+      padding: 0.4rem 1rem;
+      font-size: 0.85rem;
       font-weight: 500;
       border-radius: 60px;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      margin-top: 0.8rem;
+      gap: 6px;
+      margin-top: 0.6rem;
     }
 
     .portfolio-page {
@@ -301,36 +311,34 @@
       font-size: 0.8rem;
     }
 
-    /* KWA SIMU - MAFANIKIO ZAIDI */
+    /* KWA SIMU */
     @media (max-width: 768px) {
-      .welcome-content-bottom h1 { font-size: 1.5rem; }
-      .welcome-content-bottom .tagline { font-size: 1rem; }
-      .enter-btn { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
+      .top-title h1 { font-size: 1rem; }
+      .welcome-content-bottom .tagline { font-size: 0.95rem; }
+      .enter-btn { padding: 0.5rem 1rem; font-size: 0.85rem; }
       
-      /* REKEBISHA SEHEMU PICHA INAPOANZA - BADILISHA THAMANI HII */
       .image-top img {
-        margin-top: -60px;
-        margin-bottom: -40px;
+        margin-top: -30px;
+        margin-bottom: -20px;
       }
       
       .image-top {
-        max-height: 55vh;
-        min-height: 35vh;
+        max-height: 40vh;
+        min-height: 28vh;
       }
       
       .welcome-content-bottom {
-        padding: 0.8rem 1.2rem 1.5rem 1.2rem;
+        padding: 0.3rem 1.2rem 1rem 1.2rem;
       }
     }
 
-    /* KWA SIMU NDOGO SANA (iPhone SE, Android ndogo) */
     @media (max-width: 480px) {
       .image-top img {
-        margin-top: -50px;
-        margin-bottom: -30px;
+        margin-top: -25px;
+        margin-bottom: -15px;
       }
       .image-top {
-        max-height: 50vh;
+        max-height: 38vh;
       }
     }
   </style>
@@ -339,24 +347,29 @@
 
 <!-- WELCOME PAGE -->
 <div id="welcomePage" class="welcome-page">
-  <!-- CONTAINER LA PICHA - KATA KUTOKA JUU -->
+  
+  <!-- TITLE JUU KABISA - NYEMBANIA -->
+  <div class="top-title">
+    <h1>✨ Welcome to my portfolio ✨</h1>
+  </div>
+  
+  <!-- PICHA -->
   <div class="image-top">
     <img id="profileImage" src="taisoni.png" alt="Taisoni Ambokile Mwaluswaswa">
   </div>
   
-  <!-- WELCOME CONTENT CHINI -->
+  <!-- WELCOME CONTENT (IMEPANDISHWA JUU ZAIDI) -->
   <div class="welcome-content-bottom">
-    <h1>🌍 Welcome to my portfolio</h1>
     <div class="tagline">I'm Taisoni Ambokile Mwaluswaswa</div>
     <p><strong>Geographical Information System and Remote Sensing expert passionate about transforming spatial data into meaningful insights and real-world solutions. Here, you'll discover my work, projects, and innovations in mapping, spatial analysis, and geospatial technology. Turning data into decisions, and ideas into impactful solutions.</strong></p>
     <button class="enter-btn" onclick="goToPortfolio()">🚀 Enter Portfolio ➡️</button>
     <br>
     <button class="voice-trigger-btn" onclick="speakWelcomeMessage()">🔊 Sauti / Welcome Voice</button>
-    <p style="font-size:0.7rem; margin-top:0.8rem; color:#6c7a8a;">Bonyeza "Sauti" kusikiliza ujumbe wa kukaribisha</p>
+    <p style="font-size:0.65rem; margin-top:0.6rem; color:#6c7a8a;">Bonyeza "Sauti" kusikiliza ujumbe wa kukaribisha</p>
   </div>
 </div>
 
-<!-- PORTFOLIO PAGE -->
+<!-- PORTFOLIO PAGE (HAIJABADILISHWA) -->
 <div id="portfolioPage" class="portfolio-page">
   <div class="container">
     <div class="hero">
