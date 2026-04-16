@@ -463,6 +463,35 @@
       transform: scale(1.05);
     }
     
+    /* R Code Accordion Style */
+    .code-accordion {
+      margin-top: 1.5rem;
+      background: #f0f4f8;
+      border-radius: 1rem;
+      padding: 1rem;
+    }
+    .code-accordion details {
+      cursor: pointer;
+    }
+    .code-accordion summary {
+      font-weight: 600;
+      color: #1f4e3c;
+      padding: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .code-accordion pre {
+      background: #1e1e2f;
+      color: #f8f8f2;
+      padding: 1rem;
+      border-radius: 0.8rem;
+      overflow-x: auto;
+      font-size: 0.7rem;
+      margin-top: 1rem;
+    }
+    .code-accordion code {
+      font-family: 'Courier New', monospace;
+    }
+    
     footer {
       text-align: center;
       padding: 1rem;
@@ -576,6 +605,15 @@
             <div class="map-meta"><span class="map-type">🗺️ GIS - Social Services</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
           </div>
         </div>
+        <!-- CHIKOLE MAP - NEW -->
+        <div class="map-card" onclick="openModal('chikole.jpeg', 'Chikole Village Detailed Map - Ubungo District')">
+          <div class="map-image"><img src="chikole.jpeg" alt="Chikole Village Map"></div>
+          <div class="map-details">
+            <h3>Chikole Village Detailed Map</h3>
+            <p>High-resolution map showing village boundaries, land use, and infrastructure in Chikole Village, Ubungo District.</p>
+            <div class="map-meta"><span class="map-type">🗺️ GIS - Village Mapping</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
+          </div>
+        </div>
         <!-- Ardhi University Map -->
         <div class="map-card" onclick="openModal('ardhi_university_map.png', 'Ardhi University Campus Map')">
           <div class="map-image"><img src="ardhi_university_map.png" alt="Ardhi University Map" onerror="this.parentElement.innerHTML='<span>🏛️ Ardhi University Map</span>'"></div>
@@ -595,6 +633,18 @@
         <h2>Remote Sensing Maps | Ramani za Picha za Anga</h2>
       </div>
       <div class="maps-grid">
+        <!-- PROCESSED IMAGE (RSTUDIO PREPROCESSING) - NEW -->
+        <div class="map-card" onclick="openModal('processed.png', 'Image Preprocessing Comparison - RStudio Analysis')">
+          <div class="map-image"><img src="processed.png" alt="Image Preprocessing Comparison"></div>
+          <div class="map-details">
+            <h3>Image Preprocessing in RStudio</h3>
+            <p>Comparison of five preprocessing techniques: Normalization, Brightening, Gamma Correction (γ=0.5), Low-pass Filter (Blur), and High-pass Filter (Sharpen). Implemented using EBImage package in RStudio.</p>
+            <div class="map-meta">
+              <span class="map-type">🛰️ RS - Image Enhancement</span>
+              <span class="zoom-hint">🔍 Bonyeza kuzoom</span>
+            </div>
+          </div>
+        </div>
         <div class="map-card" onclick="openModal('NDVI.png', 'NDVI of Ubungo District - 2025')">
           <div class="map-image"><img src="NDVI.png" alt="NDVI 2025 Map"></div>
           <div class="map-details">
@@ -635,6 +685,78 @@
             <div class="map-meta"><span class="map-type">🛰️ RS - Climate</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
           </div>
         </div>
+      </div>
+      
+      <!-- R CODE ACCORDION - KWA AJILI YA PROCESSED IMAGE -->
+      <div class="code-accordion">
+        <details>
+          <summary>📜 View R Code Used for Image Preprocessing (RStudio)</summary>
+          <pre><code># ==========================================
+# IMAGE PREPROCESSING IN RSTUDIO
+# Tool: RStudio + EBImage Package
+# Purpose: Preprocessing for Remote Sensing Analysis
+# ==========================================
+
+# 1. Load required libraries
+library(EBImage)  # Bioconductor image processing
+library(jpeg)     # Read JPEG images
+
+# 2. Read the original image
+img <- readImage("original.jpg")
+
+# 3. NORMALIZATION (Min-Max scaling to [0,1] range)
+img_norm <- (img - min(img)) / (max(img) - min(img))
+
+# 4. BRIGHTENING (Add 0.2, clip values >1)
+img_bright <- img_norm + 0.2
+img_bright[img_bright > 1] <- 1
+
+# 5. GAMMA CORRECTION (Gamma = 0.5 for mid-tone enhancement)
+img_gamma <- img_norm ^ 0.5
+
+# 6. LOW-PASS FILTER (Gaussian blur for noise reduction)
+lp_filter <- makeBrush(21, shape = "disc")^2
+lp_filter <- lp_filter / sum(lp_filter)
+img_blur <- filter2(img_norm, lp_filter)
+
+# 7. HIGH-PASS FILTER (Sharpening for edge enhancement)
+hp_filter <- matrix(-1, nrow = 3, ncol = 3)
+hp_filter[2,2] <- 8
+img_sharpen <- filter2(img_norm, hp_filter)
+img_sharpen <- img_sharpen / 5 + img_norm
+img_sharpen[img_sharpen > 1] <- 1
+img_sharpen[img_sharpen < 0] <- 0
+
+# 8. Save processed images
+writeImage(img_norm, "normalized.jpg")
+writeImage(img_bright, "brightened.jpg")
+writeImage(img_gamma, "gamma.jpg")
+writeImage(img_blur, "blurred.jpg")
+writeImage(img_sharpen, "sharpened.jpg")
+
+# 9. Create comparison grid (2 rows x 3 columns)
+png("processed.png", width = 3000, height = 2000, res = 300)
+par(mfrow = c(2, 3))
+par(mar = c(1, 1, 3, 1))
+
+plot_image <- function(img, title_text) {
+  plot(NA, xlim = 0:1, ylim = 0:1, xaxt = "n", yaxt = "n", xlab = "", ylab = "")
+  rasterImage(img, 0, 0, 1, 1)
+  rect(0, 0, 1, 1, border = "black", lwd = 2)
+  title(main = title_text, cex.main = 1.5)
+}
+
+plot_image(img, "Original")
+plot_image(img_norm, "Normalized [0-1]")
+plot_image(img_bright, "Brightened (+0.2)")
+plot_image(img_gamma, "Gamma (γ = 0.5)")
+plot_image(img_blur, "Low-pass (Blur)")
+plot_image(img_sharpen, "High-pass (Sharpen)")
+
+dev.off()
+cat("✅ Preprocessing complete! Grid saved as 'processed.png'")</code></pre>
+          <p style="font-size: 0.7rem; color: #5a6e7c; margin-top: 0.5rem;">🔧 <strong>Tools:</strong> RStudio 2024.04+ | EBImage 4.44+ | R 4.3+</p>
+        </details>
       </div>
     </div>
 
@@ -731,6 +853,7 @@
             <div class="map-meta"><span class="map-type">📷 Photogrammetry - Orthomosaic</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
           </div>
         </div>
+        <!-- CONTOUR MAP - already existing -->
         <div class="map-card" onclick="openModal('contour.png', 'Contour Map - Ubungo District')">
           <div class="map-image"><img src="contour.png" alt="Contour Map" onerror="this.parentElement.innerHTML='<span>🗺️ Contour Lines</span>'"></div>
           <div class="map-details">
