@@ -17,7 +17,6 @@
       background: white;
     }
 
-    /* WELCOME PAGE - full screen, ipo juu */
     .welcome-page {
       width: 100%;
       min-height: 100vh;
@@ -121,7 +120,6 @@
       margin-top: 0.6rem;
     }
 
-    /* PORTFOLIO PAGE - ipo chini ya welcome page */
     .portfolio-page {
       background: linear-gradient(135deg, #f0f9ff 0%, #e6f0f5 100%);
       width: 100%;
@@ -152,61 +150,6 @@
       margin-top: 0.5rem;
     }
 
-    /* CATEGORY SECTIONS */
-    .category-section {
-      background: rgba(255,255,255,0.98);
-      border-radius: 1.5rem;
-      margin-bottom: 2rem;
-      padding: 1.5rem;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-    .category-section:hover {
-      transform: translateY(-3px);
-    }
-    .category-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      border-bottom: 3px solid #e2e8f0;
-      padding-bottom: 0.8rem;
-      margin-bottom: 1.5rem;
-    }
-    .category-header h2 { font-size: 1.6rem; font-weight: 700; }
-    .category-icon { font-size: 2rem; }
-    .grid-2col {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 1.8rem;
-    }
-    .skill-card, .tools-card {
-      background: #fafdff;
-      padding: 1.2rem;
-      border-radius: 1.2rem;
-      border-left: 4px solid;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    .skill-card h3, .tools-card h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.8rem;
-    }
-    .skill-list, .tools-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-top: 0.5rem;
-      list-style: none;
-    }
-    .skill-list li, .tools-list span {
-      background: #eff3f8;
-      padding: 0.3rem 1rem;
-      border-radius: 40px;
-      font-size: 0.85rem;
-      font-weight: 500;
-    }
-
-    /* MAPS GALLERY */
     .maps-showcase {
       background: rgba(255,255,255,0.98);
       border-radius: 1.5rem;
@@ -226,6 +169,9 @@
       font-size: 1.6rem;
       font-weight: 700;
       color: #1f4e3c;
+    }
+    .category-icon {
+      font-size: 2rem;
     }
     .maps-grid {
       display: grid;
@@ -299,7 +245,132 @@
       gap: 4px;
     }
 
-    /* MODAL ZOOM STYLES */
+    .category-section {
+      background: rgba(255,255,255,0.98);
+      border-radius: 1.5rem;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+    }
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 3px solid #e2e8f0;
+      padding-bottom: 0.8rem;
+      margin-bottom: 1.5rem;
+    }
+    .category-header h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+    .grid-2col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 1.8rem;
+    }
+    .skill-card, .tools-card {
+      background: #fafdff;
+      padding: 1.2rem;
+      border-radius: 1.2rem;
+      border-left: 4px solid;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .skill-list, .tools-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.5rem;
+      list-style: none;
+    }
+    .skill-list li, .tools-list span {
+      background: #eff3f8;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .code-accordion {
+      margin-top: 1.5rem;
+      background: #f0f4f8;
+      border-radius: 1rem;
+      padding: 1rem;
+    }
+    .code-accordion details {
+      cursor: pointer;
+    }
+    .code-accordion summary {
+      font-weight: 600;
+      color: #1f4e3c;
+      padding: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .code-accordion pre {
+      background: #1e1e2f;
+      color: #f8f8f2;
+      padding: 1rem;
+      border-radius: 0.8rem;
+      overflow-x: auto;
+      font-size: 0.7rem;
+      margin-top: 1rem;
+    }
+    .code-accordion code {
+      font-family: 'Courier New', monospace;
+    }
+
+    .contact-portfolio-container {
+      text-align: center;
+      margin: 2rem 0 1rem;
+    }
+    .contact-portfolio-btn {
+      background: linear-gradient(135deg, #3b82f6, #1e4a8a);
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+      border-radius: 60px;
+      cursor: pointer;
+      display: inline-flex;
+      gap: 6px;
+    }
+    .contact-info-portfolio {
+      background: white;
+      border-radius: 1rem;
+      padding: 1rem;
+      margin-top: 1rem;
+      display: none;
+      text-align: center;
+      max-width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .contact-info-portfolio.visible { display: block; }
+    .back-to-home {
+      text-align: center;
+      margin: 2rem 0 1rem;
+    }
+    .home-btn {
+      background: linear-gradient(135deg, #1f4e3c, #2c7a5e);
+      color: white;
+      border: none;
+      padding: 0.7rem 1.8rem;
+      border-radius: 40px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #2c5a4a;
+      border-top: 1px solid #cbdde6;
+      margin-top: 1rem;
+      font-size: 0.8rem;
+    }
+
+    /* MODAL ZOOM */
     .modal {
       display: none;
       position: fixed;
@@ -361,11 +432,6 @@
       font-size: 1.5rem;
       font-weight: bold;
       cursor: pointer;
-      transition: all 0.2s;
-    }
-    .zoom-controls button:hover {
-      background: #2c7a5e;
-      color: white;
     }
     .close-modal {
       position: fixed;
@@ -383,10 +449,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-    .close-modal:hover {
-      color: #2c7a5e;
-      background: white;
     }
     .modal-title {
       position: fixed;
@@ -411,114 +473,15 @@
       z-index: 2001;
     }
 
-    .contact-portfolio-container {
-      text-align: center;
-      margin: 2rem 0 1rem;
-    }
-    .contact-portfolio-btn {
-      background: linear-gradient(135deg, #3b82f6, #1e4a8a);
-      color: white;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      font-size: 0.9rem;
-      border-radius: 60px;
-      cursor: pointer;
-      display: inline-flex;
-      gap: 6px;
-    }
-    .contact-info-portfolio {
-      background: white;
-      border-radius: 1rem;
-      padding: 1rem;
-      margin-top: 1rem;
-      display: none;
-      text-align: center;
-      max-width: 350px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .contact-info-portfolio.visible { display: block; }
-    .contact-info-portfolio a {
-      color: #2c7a5e;
-      text-decoration: none;
-    }
-    
-    /* Back to Home Button */
-    .back-to-home {
-      text-align: center;
-      margin: 2rem 0 1rem;
-    }
-    .home-btn {
-      background: linear-gradient(135deg, #1f4e3c, #2c7a5e);
-      color: white;
-      border: none;
-      padding: 0.7rem 1.8rem;
-      border-radius: 40px;
-      cursor: pointer;
-      font-size: 0.9rem;
-      font-weight: 600;
-      transition: transform 0.2s;
-    }
-    .home-btn:hover {
-      transform: scale(1.05);
-    }
-    
-    /* R Code Accordion Style */
-    .code-accordion {
-      margin-top: 1.5rem;
-      background: #f0f4f8;
-      border-radius: 1rem;
-      padding: 1rem;
-    }
-    .code-accordion details {
-      cursor: pointer;
-    }
-    .code-accordion summary {
-      font-weight: 600;
-      color: #1f4e3c;
-      padding: 0.5rem;
-      font-size: 0.9rem;
-    }
-    .code-accordion pre {
-      background: #1e1e2f;
-      color: #f8f8f2;
-      padding: 1rem;
-      border-radius: 0.8rem;
-      overflow-x: auto;
-      font-size: 0.7rem;
-      margin-top: 1rem;
-    }
-    .code-accordion code {
-      font-family: 'Courier New', monospace;
-    }
-    
-    footer {
-      text-align: center;
-      padding: 1rem;
-      color: #2c5a4a;
-      border-top: 1px solid #cbdde6;
-      margin-top: 1rem;
-      font-size: 0.8rem;
-    }
-
     @media (max-width: 768px) {
-      .top-title h1 { font-size: 1rem; }
-      .welcome-content-bottom .tagline { font-size: 0.95rem; }
-      .image-top img { margin-top: -30px; margin-bottom: -20px; }
-      .image-top { max-height: 40vh; min-height: 28vh; }
-      .welcome-content-bottom { padding: 0.5rem 1rem 1rem 1rem; margin-top: -5px; }
-      .category-header h2 { font-size: 1.3rem; }
-      .hero h2 { font-size: 1.4rem; }
-      .maps-header h2 { font-size: 1.3rem; }
       .maps-grid { grid-template-columns: 1fr; }
       .modal-img-container { width: 95%; height: 80%; }
-      .zoom-controls button { width: 35px; height: 35px; font-size: 1.2rem; }
     }
   </style>
 </head>
 <body>
 
-<!-- WELCOME PAGE - juu, full screen -->
+<!-- WELCOME PAGE -->
 <div id="welcomePage" class="welcome-page">
   <div class="top-title">
     <h1>✨ Welcome to my portfolio ✨</h1>
@@ -528,13 +491,12 @@
   </div>
   <div class="welcome-content-bottom">
     <div class="tagline">I'm Taisoni Ambokile Mwaluswaswa</div>
-    <p><strong>Geographical Information System and Remote Sensing expert passionate about transforming spatial data into meaningful insights and real-world solutions. Here, you'll discover my work, projects, and innovations in mapping, spatial analysis, and geospatial technology. Turning data into decisions, and ideas into impactful solutions.</strong></p>
+    <p><strong>Geographical Information System and Remote Sensing expert passionate about transforming spatial data into meaningful insights and real-world solutions.</strong></p>
     <button class="voice-trigger-btn" onclick="playMyWelcomeAudio()">🔊 Sauti / Welcome Voice</button>
-    <p style="font-size:0.65rem; margin-top:0.6rem; color:#cccccc;">Sauti yangu itacheza moja kwa moja. Bonyeza kitufe kama haikusikika.</p>
   </div>
 </div>
 
-<!-- PORTFOLIO PAGE - chini, mtu anascroll tu kuiona -->
+<!-- PORTFOLIO PAGE -->
 <div class="portfolio-page">
   <div class="container">
     <div class="hero">
@@ -542,7 +504,193 @@
       <p>Mwendelezo wa taaluma zangu katika Ramani, Picha za Anga, na Teknolojia ya Jiografia</p>
     </div>
 
-    <!-- ============ GIS MAPS SECTION ============ -->
+    <!-- ============ PYTHON IMAGE PROCESSING SECTION ============ -->
+    <div class="maps-showcase">
+      <div class="maps-header">
+        <div class="category-icon">🐍🖼️</div>
+        <h2>Python Image Processing | Usindikaji wa Picha kwa Python</h2>
+      </div>
+      <div class="maps-grid">
+        
+        <div class="map-card" onclick="openModal('1_original_rose.png', 'Original Rose Image - Loaded with OpenCV')">
+          <div class="map-image"><img src="1_original_rose.png" alt="Original Rose"></div>
+          <div class="map-details">
+            <h3>Original Image (Rose)</h3>
+            <p>Image loaded using OpenCV. Dimensions: 1180x786 pixels.</p>
+            <div class="map-meta"><span class="map-type">🐍 OpenCV - Loading</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
+          </div>
+        </div>
+        
+        <div class="map-card" onclick="openModal('01_Loading_and_Color_Spaces.png', 'Color Space Conversions - BGR, RGB, and Grayscale')">
+          <div class="map-image"><img src="01_Loading_and_Color_Spaces.png" alt="Color Spaces"></div>
+          <div class="map-details">
+            <h3>Color Space Conversions</h3>
+            <p>Comparison of BGR (OpenCV default), RGB (True Color), and Grayscale conversions.</p>
+            <div class="map-meta"><span class="map-type">🐍 Python - Color Spaces</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
+          </div>
+        </div>
+        
+        <div class="map-card" onclick="openModal('02_Pillow_Operations.png', 'Pillow Library Operations - RGB and Grayscale')">
+          <div class="map-image"><img src="02_Pillow_Operations.png" alt="Pillow Operations"></div>
+          <div class="map-details">
+            <h3>Pillow Library Operations</h3>
+            <p>Image loading using Pillow (direct RGB) and grayscale conversion.</p>
+            <div class="map-meta"><span class="map-type">🐍 Python - Pillow</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
+          </div>
+        </div>
+        
+        <div class="map-card" onclick="openModal('03_Resizing_Images.png', 'Image Resizing - 128x128 to 512x512')">
+          <div class="map-image"><img src="03_Resizing_Images.png" alt="Resizing"></div>
+          <div class="map-details">
+            <h3>Image Resizing</h3>
+            <p>Images resized to standard dimensions: 128x128, 224x224, 256x256, 512x512.</p>
+            <div class="map-meta"><span class="map-type">🐍 Python - Resizing</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
+          </div>
+        </div>
+        
+        <div class="map-card" onclick="openModal('04_Normalization.png', 'Pixel Normalization - Scaling to 0-1 Range')">
+          <div class="map-image"><img src="04_Normalization.png" alt="Normalization"></div>
+          <div class="map-details">
+            <h3>Pixel Normalization</h3>
+            <p>Normalizing pixel values from 0-255 to 0-1 range for better model performance.</p>
+            <div class="map-meta"><span class="map-type">🐍 Python - Normalization</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
+          </div>
+        </div>
+        
+        <div class="map-card" onclick="openModal('05_Filters.png', 'Image Filters - Gaussian, Median, Bilateral')">
+          <div class="map-image"><img src="05_Filters.png" alt="Filters"></div>
+          <div class="map-details">
+            <h3>Image Filters (Noise Reduction)</h3>
+            <p>Gaussian Blur, Median Blur, and Bilateral Filter for edge-preserving smoothing.</p>
+            <div class="map-meta"><span class="map-type">🐍 Python - Filters</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
+          </div>
+        </div>
+        
+        <div class="map-card" onclick="openModal('06_Edge_Detection.png', 'Edge Detection - Canny, Laplacian, Sobel')">
+          <div class="map-image"><img src="06_Edge_Detection.png" alt="Edge Detection"></div>
+          <div class="map-details">
+            <h3>Edge Detection Techniques</h3>
+            <p>Canny, Laplacian (second derivative), and Sobel X/Y directional edge detection.</p>
+            <div class="map-meta"><span class="map-type">🐍 Python - Edge Detection</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
+          </div>
+        </div>
+        
+        <div class="map-card" onclick="openModal('6_gaussian_blur.png', 'Gaussian Blur (5x5) - Noise Reduction')">
+          <div class="map-image"><img src="6_gaussian_blur.png" alt="Gaussian Blur"></div>
+          <div class="map-details">
+            <h3>Gaussian Blur (5x5)</h3>
+            <p>Smoothing filter that reduces general image noise using Gaussian function.</p>
+            <div class="map-meta"><span class="map-type">🐍 Python - Gaussian Blur</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
+          </div>
+        </div>
+        
+        <div class="map-card" onclick="openModal('7_median_blur.png', 'Median Blur (5x5) - Salt & Pepper Noise Removal')">
+          <div class="map-image"><img src="7_median_blur.png" alt="Median Blur"></div>
+          <div class="map-details">
+            <h3>Median Blur (5x5)</h3>
+            <p>Effective filter for removing salt-and-pepper noise while preserving edges.</p>
+            <div class="map-meta"><span class="map-type">🐍 Python - Median Blur</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
+          </div>
+        </div>
+        
+        <div class="map-card" onclick="openModal('8_bilateral_filter.png', 'Bilateral Filter - Edge-Preserving Smoothing')">
+          <div class="map-image"><img src="8_bilateral_filter.png" alt="Bilateral Filter"></div>
+          <div class="map-details">
+            <h3>Bilateral Filter</h3>
+            <p>Advanced filter that smooths images while preserving sharp edges.</p>
+            <div class="map-meta"><span class="map-type">🐍 Python - Bilateral</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
+          </div>
+        </div>
+        
+        <div class="map-card" onclick="openModal('9_canny_edges.png', 'Canny Edge Detection - Object Boundary Detection')">
+          <div class="map-image"><img src="9_canny_edges.png" alt="Canny Edges"></div>
+          <div class="map-details">
+            <h3>Canny Edge Detection</h3>
+            <p>Multi-stage algorithm detecting strong and weak edges in the image.</p>
+            <div class="map-meta"><span class="map-type">🐍 Python - Canny</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
+          </div>
+        </div>
+        
+        <div class="map-card" onclick="openModal('10_laplacian_edges.png', 'Laplacian Edge Detection - Second Derivative Method')">
+          <div class="map-image"><img src="10_laplacian_edges.png" alt="Laplacian Edges"></div>
+          <div class="map-details">
+            <h3>Laplacian Edge Detection</h3>
+            <p>Second derivative method that detects intensity changes.</p>
+            <div class="map-meta"><span class="map-type">🐍 Python - Laplacian</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
+          </div>
+        </div>
+        
+        <div class="map-card" onclick="openModal('11_normalized.jpg', 'Normalized Aero1 Image (0-1 Range)')">
+          <div class="map-image"><img src="11_normalized.jpg" alt="Normalized Aero"></div>
+          <div class="map-details">
+            <h3>Normalized Aero Image</h3>
+            <p>Aero1 image normalized to 0-1 pixel value range.</p>
+            <div class="map-meta"><span class="map-type">🐍 Python - Normalization</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
+          </div>
+        </div>
+        
+        <div class="map-card" onclick="openModal('3_grayscale_rose.png', 'Grayscale Rose Image')">
+          <div class="map-image"><img src="3_grayscale_rose.png" alt="Grayscale Rose"></div>
+          <div class="map-details">
+            <h3>Grayscale Rose</h3>
+            <p>Single channel intensity image converted from RGB.</p>
+            <div class="map-meta"><span class="map-type">🐍 Python - Grayscale</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
+          </div>
+        </div>
+        
+        <div class="map-card" onclick="openModal('4_resized_224x224.png', 'Resized Image 224x224')">
+          <div class="map-image"><img src="4_resized_224x224.png" alt="Resized 224"></div>
+          <div class="map-details">
+            <h3>Resized (224x224)</h3>
+            <p>Standard size for CNN models like VGG, ResNet.</p>
+            <div class="map-meta"><span class="map-type">🐍 Python - Resizing</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="code-accordion">
+        <details>
+          <summary>📜 View Python Code Used for Image Processing</summary>
+          <pre><code>import cv2
+import numpy as np
+from PIL import Image
+import matplotlib.pyplot as plt
+
+# 1. LOAD IMAGE
+img = cv2.imread('rose.png')
+img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+# 2. RESIZING
+resized_224 = cv2.resize(img, (224, 224))
+
+# 3. NORMALIZATION
+normalized = img_rgb / 255.0
+
+# 4. FILTERS
+gaussian = cv2.GaussianBlur(img, (5, 5), 0)
+median = cv2.medianBlur(img, 5)
+bilateral = cv2.bilateralFilter(img, 9, 75, 75)
+
+# 5. EDGE DETECTION
+edges = cv2.Canny(img_gray, 70, 135)
+laplacian = cv2.Laplacian(img_gray, cv2.CV_64F)
+
+# Save all images
+cv2.imwrite('1_original_rose.png', img)
+cv2.imwrite('3_grayscale_rose.png', img_gray)
+cv2.imwrite('6_gaussian_blur.png', gaussian)
+cv2.imwrite('7_median_blur.png', median)
+cv2.imwrite('8_bilateral_filter.png', bilateral)
+cv2.imwrite('9_canny_edges.png', edges)
+print("✅ All images saved successfully!")</code></pre>
+        </details>
+      </div>
+    </div>
+
+    <!-- ============ OTHER SECTIONS (GIS, Remote Sensing, etc.) ============ -->
+    
     <div class="maps-showcase">
       <div class="maps-header">
         <div class="category-icon">🗺️📍</div>
@@ -551,330 +699,45 @@
       <div class="maps-grid">
         <div class="map-card" onclick="openModal('Population%20Distribution%20Map.jpg', 'Population Distribution Map - Ubungo District')">
           <div class="map-image"><img src="Population%20Distribution%20Map.jpg" alt="Population Distribution Map"></div>
-          <div class="map-details">
-            <h3>Population Distribution Map</h3>
-            <p>Ward-level population distribution in Ubungo District using graduated proportional circles.</p>
-            <div class="map-meta"><span class="map-type">🗺️ GIS - Demographics</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
-          </div>
+          <div class="map-details"><h3>Population Distribution Map</h3><p>Ward-level population distribution using graduated proportional circles.</p><div class="map-meta"><span class="map-type">🗺️ GIS - Demographics</span></div></div>
         </div>
-        <div class="map-card" onclick="openModal('Population%20Density%20Map.jpg', 'Population Density Map - Ubungo District')">
-          <div class="map-image"><img src="Population%20Density%20Map.jpg" alt="Population Density Map"></div>
-          <div class="map-details">
-            <h3>Population Density Map</h3>
-            <p>Choropleth map showing persons per km² across wards of Ubungo District.</p>
-            <div class="map-meta"><span class="map-type">🗺️ GIS - Demographics</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
-          </div>
-        </div>
-        <div class="map-card" onclick="openModal('Change%20Detection%20Maps.jpg', 'Change Detection 2014 → 2019 - Ubungo District')">
-          <div class="map-image"><img src="Change%20Detection%20Maps.jpg" alt="Change Detection Map"></div>
-          <div class="map-details">
-            <h3>Change Detection 2014 → 2019</h3>
-            <p>Land cover transitions showing conversion from Bare Land/Vegetation to Built-up.</p>
-            <div class="map-meta"><span class="map-type">🗺️ GIS - Change Detection</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
-          </div>
-        </div>
-        <div class="map-card" onclick="openModal('Transportation%20Network%20Map.png', 'Transportation Network Map - Ubungo District')">
-          <div class="map-image"><img src="Transportation%20Network%20Map.png" alt="Transportation Network Map"></div>
-          <div class="map-details">
-            <h3>Transportation Network Map</h3>
-            <p>Road hierarchy, railway, and bus stops in Ubungo District.</p>
-            <div class="map-meta"><span class="map-type">🗺️ GIS - Infrastructure</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
-          </div>
-        </div>
-        <div class="map-card" onclick="openModal('Health%20Centers%20Distribution%20Map.png', 'Health Centers Distribution Map - Ubungo District')">
-          <div class="map-image"><img src="Health%20Centers%20Distribution%20Map.png" alt="Health Centers Distribution Map"></div>
-          <div class="map-details">
-            <h3>Health Centers Distribution Map</h3>
-            <p>Hospitals, dispensaries, clinics, and pharmacies across Ubungo District.</p>
-            <div class="map-meta"><span class="map-type">🗺️ GIS - Social Services</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
-          </div>
-        </div>
-        <div class="map-card" onclick="openModal('Police%20Stations%20Distribution%20Map.png', 'Police Stations Distribution Map - Ubungo District')">
-          <div class="map-image"><img src="Police%20Stations%20Distribution%20Map.png" alt="Police Stations Distribution Map"></div>
-          <div class="map-details">
-            <h3>Police Stations Distribution Map</h3>
-            <p>Police stations across Ubungo District overlaid on road network.</p>
-            <div class="map-meta"><span class="map-type">🗺️ GIS - Security</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
-          </div>
-        </div>
-        <div class="map-card" onclick="openModal('Primary%20Schools%20Distribution%20Map.png', 'Primary Schools Distribution Map - Ubungo District')">
-          <div class="map-image"><img src="Primary%20Schools%20Distribution%20Map.png" alt="Primary Schools Distribution Map"></div>
-          <div class="map-details">
-            <h3>Primary Schools Distribution Map</h3>
-            <p>Public primary schools across Ubungo District.</p>
-            <div class="map-meta"><span class="map-type">🗺️ GIS - Social Services</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
-          </div>
-        </div>
-        <div class="map-card" onclick="openModal('chikole.jpeg', 'Chikole Village Detailed Map - Ubungo District')">
-          <div class="map-image"><img src="chikole.jpeg" alt="Chikole Village Map"></div>
-          <div class="map-details">
-            <h3>Chikole Village Detailed Map</h3>
-            <p>High-resolution map showing village boundaries, land use, and infrastructure in Chikole Village, Ubungo District.</p>
-            <div class="map-meta"><span class="map-type">🗺️ GIS - Village Mapping</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
-          </div>
-        </div>
-        <div class="map-card" onclick="openModal('ardhi_university_map.png', 'Ardhi University Campus Map')">
-          <div class="map-image"><img src="ardhi_university_map.png" alt="Ardhi University Map" onerror="this.parentElement.innerHTML='<span>🏛️ Ardhi University Map</span>'"></div>
-          <div class="map-details">
-            <h3>Ardhi University Campus Map</h3>
-            <p>Map showing Ardhi University (ARU) - Chuo cha Ardhi, Dar es Salaam, Tanzania.</p>
-            <div class="map-meta"><span class="map-type">🗺️ GIS - Campus Map</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
-          </div>
+        <div class="map-card" onclick="openModal('Change%20Detection%20Maps.jpg', 'Change Detection 2014 → 2019')">
+          <div class="map-image"><img src="Change%20Detection%20Maps.jpg" alt="Change Detection"></div>
+          <div class="map-details"><h3>Change Detection 2014 → 2019</h3><p>Land cover transitions showing conversion to Built-up.</p><div class="map-meta"><span class="map-type">🗺️ GIS - Change Detection</span></div></div>
         </div>
       </div>
     </div>
 
-    <!-- ============ REMOTE SENSING MAPS SECTION ============ -->
     <div class="maps-showcase">
       <div class="maps-header">
         <div class="category-icon">🛰️🌿</div>
         <h2>Remote Sensing Maps | Ramani za Picha za Anga</h2>
       </div>
       <div class="maps-grid">
-        <div class="map-card" onclick="openModal('processed.png', 'Image Preprocessing Comparison - RStudio Analysis')">
-          <div class="map-image"><img src="processed.png" alt="Image Preprocessing Comparison"></div>
-          <div class="map-details">
-            <h3>Image Preprocessing in RStudio</h3>
-            <p>Comparison of five preprocessing techniques: Normalization, Brightening, Gamma Correction (γ=0.5), Low-pass Filter (Blur), and High-pass Filter (Sharpen). Implemented using EBImage package in RStudio.</p>
-            <div class="map-meta">
-              <span class="map-type">🛰️ RS - Image Enhancement</span>
-              <span class="zoom-hint">🔍 Bonyeza kuzoom</span>
-            </div>
-          </div>
-        </div>
         <div class="map-card" onclick="openModal('NDVI.png', 'NDVI of Ubungo District - 2025')">
-          <div class="map-image"><img src="NDVI.png" alt="NDVI 2025 Map"></div>
-          <div class="map-details">
-            <h3>NDVI of Ubungo District - 2025</h3>
-            <p>Normalized Difference Vegetation Index showing vegetation health.</p>
-            <div class="map-meta"><span class="map-type">🛰️ RS - Vegetation Index</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
-          </div>
+          <div class="map-image"><img src="NDVI.png" alt="NDVI"></div>
+          <div class="map-details"><h3>NDVI 2025</h3><p>Normalized Difference Vegetation Index showing vegetation health.</p><div class="map-meta"><span class="map-type">🛰️ RS - Vegetation Index</span></div></div>
         </div>
-        <div class="map-card" onclick="openModal('Land%20Surface%20Temperature%20(Lst).png', 'Land Surface Temperature 2000-2005 - Ubungo District')">
-          <div class="map-image"><img src="Land%20Surface%20Temperature%20(Lst).png" alt="Land Surface Temperature 2000-2005"></div>
-          <div class="map-details">
-            <h3>Land Surface Temperature 2000-2005</h3>
-            <p>Annual mean LST from MODIS showing urban heat island effect.</p>
-            <div class="map-meta"><span class="map-type">🛰️ RS - Thermal</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
-          </div>
+        <div class="map-card" onclick="openModal('Land%20Surface%20Temperature%20(Lst).png', 'Land Surface Temperature 2000-2005')">
+          <div class="map-image"><img src="Land%20Surface%20Temperature%20(Lst).png" alt="LST"></div>
+          <div class="map-details"><h3>Land Surface Temperature</h3><p>Annual mean LST from MODIS showing urban heat island effect.</p><div class="map-meta"><span class="map-type">🛰️ RS - Thermal</span></div></div>
         </div>
-        <div class="map-card" onclick="openModal('Annual%20Air%20Temperature%20Maps.png', 'Annual Air Temperature 1995-2000 - Ubungo District')">
-          <div class="map-image"><img src="Annual%20Air%20Temperature%20Maps.png" alt="Annual Air Temperature 1995-2000"></div>
-          <div class="map-details">
-            <h3>Annual Air Temperature 1995-2000</h3>
-            <p>Annual mean air temperature from TerraClimate dataset.</p>
-            <div class="map-meta"><span class="map-type">🛰️ RS - Climate</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
-          </div>
-        </div>
-        <div class="map-card" onclick="openModal('Trend%20analysis%20between%20Rainfall%20and%20NDVI.jpg', 'Trend Analysis - NDVI and Land Surface Temperature')">
-          <div class="map-image"><img src="Trend%20analysis%20between%20Rainfall%20and%20NDVI.jpg" alt="Trend Analysis NDVI and LST"></div>
-          <div class="map-details">
-            <h3>Trend of NDVI and LST</h3>
-            <p>Time-series analysis showing NDVI and Land Surface Temperature trends.</p>
-            <div class="map-meta"><span class="map-type">🛰️ RS - Analysis</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
-          </div>
-        </div>
-        <div class="map-card" onclick="openModal('Rainfall%20Trend%20Analysis%20(2000%E2%80%932024).jpg', 'Rainfall Trend Analysis - Ubungo District (2000-2024)')">
-          <div class="map-image"><img src="Rainfall%20Trend%20Analysis%20(2000%E2%80%932024).jpg" alt="Rainfall Trend Analysis"></div>
-          <div class="map-details">
-            <h3>Rainfall Trend Analysis (2000-2024)</h3>
-            <p>Annual rainfall trend with linear regression showing 13.90 mm/year increase.</p>
-            <div class="map-meta"><span class="map-type">🛰️ RS - Climate</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="code-accordion">
-        <details>
-          <summary>📜 View R Code Used for Image Preprocessing (RStudio)</summary>
-          <pre><code># ==========================================
-# IMAGE PREPROCESSING IN RSTUDIO
-# Tool: RStudio + EBImage Package
-# Purpose: Preprocessing for Remote Sensing Analysis
-# ==========================================
-
-# 1. Load required libraries
-library(EBImage)  # Bioconductor image processing
-library(jpeg)     # Read JPEG images
-
-# 2. Read the original image
-img <- readImage("original.jpg")
-
-# 3. NORMALIZATION (Min-Max scaling to [0,1] range)
-img_norm <- (img - min(img)) / (max(img) - min(img))
-
-# 4. BRIGHTENING (Add 0.2, clip values >1)
-img_bright <- img_norm + 0.2
-img_bright[img_bright > 1] <- 1
-
-# 5. GAMMA CORRECTION (Gamma = 0.5 for mid-tone enhancement)
-img_gamma <- img_norm ^ 0.5
-
-# 6. LOW-PASS FILTER (Gaussian blur for noise reduction)
-lp_filter <- makeBrush(21, shape = "disc")^2
-lp_filter <- lp_filter / sum(lp_filter)
-img_blur <- filter2(img_norm, lp_filter)
-
-# 7. HIGH-PASS FILTER (Sharpening for edge enhancement)
-hp_filter <- matrix(-1, nrow = 3, ncol = 3)
-hp_filter[2,2] <- 8
-img_sharpen <- filter2(img_norm, hp_filter)
-img_sharpen <- img_sharpen / 5 + img_norm
-img_sharpen[img_sharpen > 1] <- 1
-img_sharpen[img_sharpen < 0] <- 0
-
-# 8. Save processed images
-writeImage(img_norm, "normalized.jpg")
-writeImage(img_bright, "brightened.jpg")
-writeImage(img_gamma, "gamma.jpg")
-writeImage(img_blur, "blurred.jpg")
-writeImage(img_sharpen, "sharpened.jpg")
-
-# 9. Create comparison grid (2 rows x 3 columns)
-png("processed.png", width = 3000, height = 2000, res = 300)
-par(mfrow = c(2, 3))
-par(mar = c(1, 1, 3, 1))
-
-plot_image <- function(img, title_text) {
-  plot(NA, xlim = 0:1, ylim = 0:1, xaxt = "n", yaxt = "n", xlab = "", ylab = "")
-  rasterImage(img, 0, 0, 1, 1)
-  rect(0, 0, 1, 1, border = "black", lwd = 2)
-  title(main = title_text, cex.main = 1.5)
-}
-
-plot_image(img, "Original")
-plot_image(img_norm, "Normalized [0-1]")
-plot_image(img_bright, "Brightened (+0.2)")
-plot_image(img_gamma, "Gamma (γ = 0.5)")
-plot_image(img_blur, "Low-pass (Blur)")
-plot_image(img_sharpen, "High-pass (Sharpen)")
-
-dev.off()
-cat("✅ Preprocessing complete! Grid saved as 'processed.png'")</code></pre>
-          <p style="font-size: 0.7rem; color: #5a6e7c; margin-top: 0.5rem;">🔧 <strong>Tools:</strong> RStudio 2024.04+ | EBImage 4.44+ | R 4.3+</p>
-        </details>
       </div>
     </div>
 
-    <!-- ============ TOPOGRAPHY/TERRAIN MAPS SECTION ============ -->
     <div class="maps-showcase">
       <div class="maps-header">
         <div class="category-icon">⛰️🗺️</div>
-        <h2>Topography & Terrain Maps | Ramani za Topografia na Ardhi</h2>
+        <h2>Topography & Terrain Maps</h2>
       </div>
       <div class="maps-grid">
-        <div class="map-card" onclick="openModal('Hillshade%20Map.png', 'Hillshade Map of Ubungo District')">
-          <div class="map-image"><img src="Hillshade%20Map.png" alt="Hillshade Map"></div>
-          <div class="map-details">
-            <h3>Hillshade Map of Ubungo District</h3>
-            <p>Shaded relief showing valley systems and drainage patterns.</p>
-            <div class="map-meta"><span class="map-type">⛰️ Terrain</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
-          </div>
+        <div class="map-card" onclick="openModal('Hillshade%20Map.png', 'Hillshade Map')">
+          <div class="map-image"><img src="Hillshade%20Map.png" alt="Hillshade"></div>
+          <div class="map-details"><h3>Hillshade Map</h3><p>Shaded relief showing valley systems and drainage patterns.</p><div class="map-meta"><span class="map-type">⛰️ Terrain</span></div></div>
         </div>
-        <div class="map-card" onclick="openModal('Aspect%20Map.png', 'Aspect Map of Ubungo District')">
-          <div class="map-image"><img src="Aspect%20Map.png" alt="Aspect Map"></div>
-          <div class="map-details">
-            <h3>Aspect Map of Ubungo District</h3>
-            <p>Slope direction (0° to 358°) showing drainage convergence.</p>
-            <div class="map-meta"><span class="map-type">⛰️ Terrain</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
-          </div>
-        </div>
-        <div class="map-card" onclick="openModal('Slope%20Map.jpg', 'Slope Map of Ubungo District')">
-          <div class="map-image"><img src="Slope%20Map.jpg" alt="Slope Map"></div>
-          <div class="map-details">
-            <h3>Slope Map of Ubungo District</h3>
-            <p>Steepness in degrees (0° to 24°).</p>
-            <div class="map-meta"><span class="map-type">⛰️ Terrain</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ============ PHOTOGRAMMETRY SECTION ============ -->
-    <div class="category-section">
-      <div class="category-header">
-        <div class="category-icon">📷✨</div>
-        <h2>Photogrammetry</h2>
-      </div>
-      <div class="grid-2col">
-        <div class="skill-card" style="border-left-color:#e67e22;">
-          <h3>🔧 What I can perform</h3>
-          <ul class="skill-list">
-            <li>Flight planning</li>
-            <li>Drone image processing</li>
-            <li>2D & 3D mapping</li>
-            <li>Orthophoto generation</li>
-            <li>Digital Surface Model</li>
-            <li>Point cloud processing</li>
-          </ul>
-        </div>
-        <div class="tools-card" style="border-left-color:#f39c12;">
-          <h3>🛠️ Tools I use</h3>
-          <div class="tools-list">
-            <span>Agisoft Metashape</span>
-            <span>Pix4D</span>
-            <span>WebODM</span>
-            <span>DroneDeploy</span>
-            <span>QGIS</span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="maps-header" style="border-bottom: none; margin-bottom: 0.5rem; padding-bottom: 0;">
-        <div class="category-icon">📸</div>
-        <h3 style="font-size: 1.2rem;">Photogrammetry Outputs</h3>
-      </div>
-      <div class="maps-grid">
-        <div class="map-card" onclick="openModal('DEM.png', 'Digital Elevation Model (DEM) - Ubungo District')">
-          <div class="map-image"><img src="DEM.png" alt="Digital Elevation Model"></div>
-          <div class="map-details">
-            <h3>Digital Elevation Model (DEM)</h3>
-            <p>Elevation model showing terrain heights from 63m to 139m above sea level.</p>
-            <div class="map-meta"><span class="map-type">📷 Photogrammetry - DEM</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
-          </div>
-        </div>
-        <div class="map-card" onclick="openModal('DSM.png', 'Digital Surface Model (DSM) - Ubungo District')">
-          <div class="map-image"><img src="DSM.png" alt="Digital Surface Model"></div>
-          <div class="map-details">
-            <h3>Digital Surface Model (DSM)</h3>
-            <p>Surface model showing elevation range from 64m to 139m including features on the surface.</p>
-            <div class="map-meta"><span class="map-type">📷 Photogrammetry - DSM</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
-          </div>
-        </div>
-        <div class="map-card" onclick="openModal('orthomosaic.png', 'Orthomosaic Map - Ubungo District')">
-          <div class="map-image"><img src="orthomosaic.png" alt="Orthomosaic Map" onerror="this.parentElement.innerHTML='<span>🖼️ Orthomosaic</span>'"></div>
-          <div class="map-details">
-            <h3>Orthomosaic Map</h3>
-            <p>High-resolution orthorectified aerial imagery mosaic of the study area.</p>
-            <div class="map-meta"><span class="map-type">📷 Photogrammetry - Orthomosaic</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
-          </div>
-        </div>
-        <div class="map-card" onclick="openModal('contour.png', 'Contour Map - Ubungo District')">
-          <div class="map-image"><img src="contour.png" alt="Contour Map" onerror="this.parentElement.innerHTML='<span>🗺️ Contour Lines</span>'"></div>
-          <div class="map-details">
-            <h3>Contour Map</h3>
-            <p>Topographic contour lines showing elevation changes across the district.</p>
-            <div class="map-meta"><span class="map-type">📷 Photogrammetry - Contour</span><span class="zoom-hint">🔍 Bonyeza kuzoom</span></div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="maps-header" style="border-bottom: none; margin-bottom: 0.5rem; padding-bottom: 0; margin-top: 1rem;">
-        <div class="category-icon">🚁</div>
-        <h3 style="font-size: 1.2rem;">Project Examples</h3>
-      </div>
-      <div class="maps-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
-        <div class="map-card">
-          <div class="map-image"><span>🏞️ Orthophoto</span></div>
-          <div class="map-details"><h3>Farmland 3D Model</h3><p>210 drone images over 22 hectares. High-resolution orthomosaic and DSM.</p><div class="map-meta"><span class="map-type">DJI Phantom 4</span></div></div>
-        </div>
-        <div class="map-card">
-          <div class="map-image"><span>🏫 3D Mesh</span></div>
-          <div class="map-details"><h3>School 3D Reconstruction</h3><p>High-res textured 3D model for volume calculation.</p><div class="map-meta"><span class="map-type">Pix4D</span></div></div>
-        </div>
-        <div class="map-card">
-          <div class="map-image"><span>⛰️ DSM</span></div>
-          <div class="map-details"><h3>Erosion Gully Mapping</h3><p>5 cm DSM for soil loss volume calculation.</p><div class="map-meta"><span class="map-type">WebODM + QGIS</span></div></div>
+        <div class="map-card" onclick="openModal('Slope%20Map.jpg', 'Slope Map')">
+          <div class="map-image"><img src="Slope%20Map.jpg" alt="Slope"></div>
+          <div class="map-details"><h3>Slope Map</h3><p>Steepness in degrees (0° to 24°).</p><div class="map-meta"><span class="map-type">⛰️ Terrain</span></div></div>
         </div>
       </div>
     </div>
@@ -884,13 +747,11 @@ cat("✅ Preprocessing complete! Grid saved as 'processed.png'")</code></pre>
       <button class="contact-portfolio-btn" onclick="togglePortfolioContact()">📞 Contact / Email</button>
       <div id="portfolioContactInfo" class="contact-info-portfolio">
         <p>📧 <strong>Email:</strong> <a href="mailto:taisonimwuluswaswa@gmail.com">taisonimwuluswaswa@gmail.com</a></p>
-        <p>📱 <strong>Phone (Call):</strong> <a href="tel:+255688163923">+255 688 163 923</a></p>
-        <p>💬 <strong>WhatsApp:</strong> <a href="https://wa.me/255688163923" target="_blank">+255 688 163 923</a></p>
-        <p>🌐 <strong>LinkedIn:</strong> <a href="#">linkedin.com/in/taisoni</a></p>
+        <p>📱 <strong>Phone:</strong> <a href="tel:+255688163923">+255 688 163 923</a></p>
+        <p>💬 <strong>WhatsApp:</strong> <a href="https://wa.me/255688163923">+255 688 163 923</a></p>
       </div>
     </div>
 
-    <!-- BACK TO HOME BUTTON - mwishoni kabisa -->
     <div class="back-to-home">
       <button class="home-btn" onclick="scrollToWelcome()">🏠 Back to Home</button>
     </div>
@@ -919,7 +780,6 @@ cat("✅ Preprocessing complete! Grid saved as 'processed.png'")</code></pre>
 </div>
 
 <script>
-  // Zoom functionality variables
   let currentZoom = 1;
   let currentImg = null;
   let panX = 0, panY = 0;
@@ -930,147 +790,32 @@ cat("✅ Preprocessing complete! Grid saved as 'processed.png'")</code></pre>
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImg');
     const modalTitle = document.getElementById('modalTitle');
-    
     modal.style.display = 'block';
     modalImg.src = imgSrc;
     modalTitle.textContent = title;
     currentImg = modalImg;
-    
     resetZoom();
     
     const container = document.getElementById('modalImgContainer');
-    container.removeEventListener('mousedown', startDrag);
-    container.removeEventListener('mousemove', drag);
-    container.removeEventListener('mouseup', endDrag);
-    container.removeEventListener('mouseleave', endDrag);
-    
-    container.addEventListener('mousedown', startDrag);
-    container.addEventListener('mousemove', drag);
-    container.addEventListener('mouseup', endDrag);
-    container.addEventListener('mouseleave', endDrag);
-    
-    container.onwheel = function(e) {
-      e.preventDefault();
-      if (e.deltaY < 0) { zoomIn(); } else { zoomOut(); }
-    };
+    container.onwheel = function(e) { e.preventDefault(); if (e.deltaY < 0) zoomIn(); else zoomOut(); };
   }
   
-  function startDrag(e) {
-    if (currentZoom <= 1) return;
-    isDragging = true;
-    startX = e.clientX - panX;
-    startY = e.clientY - panY;
-    document.getElementById('modalImgContainer').style.cursor = 'grabbing';
-  }
+  function zoomIn() { if (currentZoom < 5) { currentZoom += 0.2; applyTransform(); } }
+  function zoomOut() { if (currentZoom > 0.5) { currentZoom -= 0.2; if (currentZoom <= 1) { panX = 0; panY = 0; } applyTransform(); } }
+  function resetZoom() { currentZoom = 1; panX = 0; panY = 0; applyTransform(); }
+  function applyTransform() { if (currentImg) currentImg.style.transform = `translate(${panX}px, ${panY}px) scale(${currentZoom})`; document.getElementById('zoomLevel').textContent = `Zoom: ${Math.round(currentZoom * 100)}%`; }
+  function closeModal() { document.getElementById('imageModal').style.display = 'none'; resetZoom(); }
+  function closeModalOnBackground(e) { if (e.target === document.getElementById('imageModal')) closeModal(); }
+  function scrollToWelcome() { document.getElementById('welcomePage').scrollIntoView({ behavior: 'smooth' }); }
+  function togglePortfolioContact() { document.getElementById('portfolioContactInfo').classList.toggle('visible'); }
   
-  function drag(e) {
-    if (!isDragging || currentZoom <= 1) return;
-    e.preventDefault();
-    panX = e.clientX - startX;
-    panY = e.clientY - startY;
-    applyTransform();
-  }
-  
-  function endDrag() {
-    isDragging = false;
-    document.getElementById('modalImgContainer').style.cursor = 'grab';
-  }
-  
-  function applyTransform() {
-    if (currentImg) {
-      currentImg.style.transform = `translate(${panX}px, ${panY}px) scale(${currentZoom})`;
-    }
-  }
-  
-  function zoomIn() {
-    if (currentZoom < 5) {
-      currentZoom = Math.min(5, currentZoom + 0.2);
-      document.getElementById('zoomLevel').textContent = `Zoom: ${Math.round(currentZoom * 100)}%`;
-      applyTransform();
-    }
-  }
-  
-  function zoomOut() {
-    if (currentZoom > 0.5) {
-      currentZoom = Math.max(0.5, currentZoom - 0.2);
-      document.getElementById('zoomLevel').textContent = `Zoom: ${Math.round(currentZoom * 100)}%`;
-      if (currentZoom <= 1) { panX = 0; panY = 0; }
-      applyTransform();
-    }
-  }
-  
-  function resetZoom() {
-    currentZoom = 1;
-    panX = 0;
-    panY = 0;
-    document.getElementById('zoomLevel').textContent = 'Zoom: 100%';
-    if (currentImg) { currentImg.style.transform = `translate(0px, 0px) scale(1)`; }
-  }
-  
-  function closeModal() {
-    document.getElementById('imageModal').style.display = 'none';
-    resetZoom();
-  }
-  
-  function closeModalOnBackground(event) {
-    if (event.target === document.getElementById('imageModal')) { closeModal(); }
-  }
-  
-  // Scroll to welcome page (back to home)
-  function scrollToWelcome() {
-    document.getElementById('welcomePage').scrollIntoView({ behavior: 'smooth' });
-  }
-  
-  // ========== SAUTI YAKO MWENYEWE (AAC) ==========
   let audioPlayer = null;
-  let autoPlayDone = false;
-  
   function playMyWelcomeAudio() {
-    // Cancel any playing audio
-    if (audioPlayer) {
-      audioPlayer.pause();
-      audioPlayer.currentTime = 0;
-    }
-    
-    // Create new audio element with your AAC file
-    audioPlayer = new Audio('welcome.aac');  // Badilisha jina la faili yako hapa
-    audioPlayer.play().catch(function(error) {
-      console.log("Auto-play blocked: ", error);
-      // Browser imezuia autoplay - user atabonyeza kitufe
-    });
+    if (audioPlayer) { audioPlayer.pause(); audioPlayer.currentTime = 0; }
+    audioPlayer = new Audio('welcome.aac');
+    audioPlayer.play().catch(e => console.log("Audio play blocked"));
   }
-  
-  // Auto-play on page load (or first interaction)
-  function autoPlayWelcomeAudio() {
-    if (autoPlayDone) return;
-    playMyWelcomeAudio();
-    autoPlayDone = true;
-  }
-  
-  // Jaribu kucheza mara moja page inapobebwa
-  window.addEventListener('load', function() {
-    autoPlayWelcomeAudio();
-    
-    // Ikiwa imezuiwa, subiri mwingiliano wa mtumiaji
-    const playOnInteraction = function() {
-      if (!autoPlayDone) {
-        playMyWelcomeAudio();
-        autoPlayDone = true;
-      }
-      document.removeEventListener('click', playOnInteraction);
-      document.removeEventListener('touchstart', playOnInteraction);
-      document.removeEventListener('keydown', playOnInteraction);
-    };
-    
-    document.addEventListener('click', playOnInteraction);
-    document.addEventListener('touchstart', playOnInteraction);
-    document.addEventListener('keydown', playOnInteraction);
-  });
-  // =============================================
-
-  function togglePortfolioContact() {
-    document.getElementById('portfolioContactInfo').classList.toggle('visible');
-  }
+  window.addEventListener('load', function() { playMyWelcomeAudio(); });
 </script>
 </body>
 </html>
